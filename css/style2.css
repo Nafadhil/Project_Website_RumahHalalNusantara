@@ -1,0 +1,120 @@
+.carousel-kegiatan .carousel-inner {
+  max-height: 600px;
+  /* Atur tinggi maksimum */
+  overflow-x: auto;
+  /* Tampilkan scrollbar hanya jika diperlukan */
+  scroll-snap-type: x mandatory;
+  /* Menambahkan properti scroll-snap-type */
+}
+
+.carousel-kegiatan .carousel-inner:before {
+  background: transparent;
+  z-index: -1;
+}
+
+.carousel-kegiatan .carousel-control-prev {
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-kegiatan .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-kegiatan .scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-kegiatan .scroll-wrapper .carousel-item {
+  scroll-snap-align: center;
+}
+
+.carousel-kegiatan .carousel-inner {
+  max-height: 600px;
+  overflow-y: hidden;
+}
+
+.carousel-kegiatan .carousel-item {
+  scroll-snap-align: start;
+  /* Menambahkan properti scroll-snap-align pada carousel-item */
+}
+
+
+
+.carousel-kegiatan .row::-webkit-scrollbar {
+  width: 8px;
+  /* Atur lebar scrollbar */
+  background-color: #f5f5f5;
+  /* Warna latar belakang scrollbar */
+}
+
+.carousel-kegiatan .row::-webkit-scrollbar-thumb {
+  background-color: #345582;
+  /* Warna thumb scrollbar */
+  border-radius: 10px;
+  /* Setel radius border thumb */
+}
+
+/* style2.css */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 40px auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  padding: 7px;
+  text-align: center;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.galeri:hover {
+  transform: scale(1.3, 1.3);
+  transition: 0.3s transform;
+}
+
+/* CSS untuk mengatur tengah jika gambar kurang dari 4 */
+@media screen and (max-width: 768px) {
+  main {
+    justify-content: center;
+  }
+
+  .box {
+    width: 80%;
+    margin: 0 auto 20px;
+    /* Mengatur margin agar gambar tidak menempel */
+  }
+
+  /* Atur lebar gambar menjadi 100% untuk tampilan hp */
+  .box img {
+    width: 100%;
+  }
+}
